@@ -48,25 +48,25 @@ describe('api/transport/JsonRpcBase', () => {
       it('does not log errors with flag off', () => {
         base.setDebug(false);
         base.log('error');
-        expect(console.log).to.not.be.called;
+        expect(console.log).to.not.be;
       });
 
       it('does not log errors with flag off', () => {
         base.setDebug(false);
         base.error('error');
-        expect(console.error).to.not.be.called;
+        expect(console.error).to.not.be;
       });
 
       it('does log errors with flag on', () => {
         base.setDebug(true);
         base.log('error');
-        expect(console.log).to.be.called;
+        expect(console.log).to.be;
       });
 
       it('does log errors with flag on', () => {
         base.setDebug(true);
         base.error('error');
-        expect(console.error).to.be.called;
+        expect(console.error).to.be;
       });
     });
   });
