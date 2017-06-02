@@ -1,0 +1,1 @@
+export LocalAccountsMiddleware from './localAccountsMiddleware';

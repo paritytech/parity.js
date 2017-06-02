@@ -1,0 +1,47 @@
+{
+  "name": "parity.js",
+  "version": "0.1.0",
+  "description": "The Parity Promise-based API library for interfacing with Ethereum over RPC",
+  "main": "index.js",
+  "scripts": {
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+    "@parity/abi": "file:./abi",
+    "@parity/jsonrpc": "file:./jsonrpc",
+    "bignumber.js": "3.0.1",
+    "blockies": "0.0.2",
+    "es6-error": "4.0.0",
+    "ethereumjs-tx": "1.2.5",
+    "eventemitter3": "2.0.2",
+    "js-sha3": "0.5.5",
+    "keythereum": "0.4.6",
+    "node-fetch": "1.6.3",
+    "secp256k1": "3.2.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/paritytech/parity.js.git"
+  },
+  "keywords": [
+    "parity",
+    "module",
+    "ethereum",
+    "wrapper",
+    "eth",
+    "rpc"
+  ],
+  "maintainers": [
+    "Jaco Greeff",
+    "Nicolas Gotchac",
+    "Connor"
+  ],
+  "contributors": [],
+  "author": "Parity Technologies <admin@parity.io>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/paritytech/parity.js/issues"
+  },
+  "homepage": "https://github.com/paritytech/parity.js#readme"
+}
