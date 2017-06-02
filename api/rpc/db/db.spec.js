@@ -1,4 +1,5 @@
-import { TEST_HTTP_URL, mockHttp } from '../../../../test/mockRpc';
+import { expect } from 'chai';
+import { TEST_HTTP_URL, mockHttp } from '../mockRpc';
 
 import { Http, PromiseWrapper } from '../../provider';
 import Db from './db';

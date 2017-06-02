@@ -4,21 +4,41 @@
   "description": "The Parity Promise-based API library for interfacing with Ethereum over RPC",
   "main": "index.js",
   "scripts": {
+    "test": "NODE_ENV=test mocha --require babel-core.js 'api/**/*.spec.js'"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.0.1",
+    "chai-as-promised": "^6.0.0",
+    "chai-enzyme": "^0.7.1",
+    "enzyme": "^2.8.2",
+    "mocha": "^3.4.2",
+    "nock": "^9.0.13",
+    "sinon": "^2.3.2",
+    "utf8": "^2.1.2"
   },
   "dependencies": {
     "@parity/abi": "file:./abi",
     "@parity/jsonrpc": "file:./jsonrpc",
+    "@parity/wordlist": "^1.0.1",
     "bignumber.js": "3.0.1",
     "blockies": "0.0.2",
+    "ejs-loader": "^0.3.0",
     "es6-error": "4.0.0",
     "ethereumjs-tx": "1.2.5",
     "eventemitter3": "2.0.2",
     "js-sha3": "0.5.5",
     "keythereum": "0.4.6",
     "node-fetch": "1.6.3",
-    "secp256k1": "3.2.5"
+    "secp256k1": "3.2.5",
+    "store": "^2.0.4"
   },
   "repository": {
     "type": "git",

@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import { sha3 } from './sha3';
 
 describe('api/util/sha3', () => {

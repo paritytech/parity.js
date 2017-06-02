@@ -1,4 +1,5 @@
-import ParamType from './paramType';
+import { expect } from 'chai';
+import ParamType from './';
 import { fromParamType, toParamType } from './format';
 
 describe('abi/spec/paramType/format', () => {

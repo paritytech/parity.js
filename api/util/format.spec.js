@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import { bytesToHex, cleanupValue, hexToBytes, hexToAscii, bytesToAscii, asciiToHex } from './format';
 
 describe('api/util/format', () => {

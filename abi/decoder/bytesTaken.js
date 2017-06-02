@@ -1,5 +1,3 @@
- 
-
 export default class BytesTaken {
   constructor (bytes, newOffset) {
     this._bytes = bytes;

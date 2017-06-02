@@ -1,4 +1,5 @@
 import BigNumber from 'bignumber.js';
+import { expect } from 'chai';
 
 import Event from './event';
 import EventParam from './eventParam';

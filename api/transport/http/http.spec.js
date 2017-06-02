@@ -1,4 +1,5 @@
-import { TEST_HTTP_URL, mockHttp } from '../../../../test/mockRpc';
+import { expect } from 'chai';
+import { TEST_HTTP_URL, mockHttp } from '../mockRpc';
 import Http from './http';
 
 const transport = new Http(TEST_HTTP_URL, -1);

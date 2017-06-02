@@ -1,11 +1,11 @@
- 
+
 
 import utf8 from 'utf8';
 
-import Token from '../token/token';
+import Token from '../token';
 import BytesTaken from './bytesTaken';
 import DecodeResult from './decodeResult';
-import ParamType from '../spec/paramType/paramType';
+import ParamType from '../spec/paramType';
 import { sliceData } from '../util/slice';
 import { asAddress, asBool, asI32, asU32 } from '../util/sliceAs';
 import { isArray, isInstanceOf } from '../util/types';

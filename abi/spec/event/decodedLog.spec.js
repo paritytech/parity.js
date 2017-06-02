@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import DecodedLog from './decodedLog';
 
 const log = new DecodedLog('someParams', 'someAddress');

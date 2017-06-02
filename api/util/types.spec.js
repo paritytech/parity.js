@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import sinon from 'sinon';
 
 import { isArray, isError, isFunction, isHex, isInstanceOf, isObject, isString } from './types';

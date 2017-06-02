@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import Interface from './interface';
 import ParamType from './paramType';
 import Token from '../token';

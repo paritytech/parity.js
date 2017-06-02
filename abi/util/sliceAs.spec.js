@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import { asAddress, asBool, asI32, asU32 } from './sliceAs';
 
 describe('abi/util/sliceAs', () => {

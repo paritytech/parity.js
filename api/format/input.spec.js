@@ -1,11 +1,12 @@
 import BigNumber from 'bignumber.js';
+import { expect } from 'chai';
 
 import {
   inAddress, inBlockNumber, inData, inFilter, inHex,
   inNumber10, inNumber16, inOptions, inTraceType,
   inDeriveHash, inDeriveIndex
 } from './input';
-import { isAddress } from '../../../test/types';
+import { isAddress } from '../util/types';
 
 describe('api/format/input', () => {
   const address = '0x63cf90d3f0410092fc0fca41846f596223979195';

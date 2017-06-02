@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import { _getUnitMultiplier, fromWei, toWei } from './wei';
 
 describe('api/util/wei', () => {

@@ -1,4 +1,5 @@
 import EventParam from './eventParam';
+import { expect } from 'chai';
 
 describe('abi/spec/event/EventParam', () => {
   describe('constructor', () => {

@@ -1,4 +1,5 @@
-import Token from './token';
+import { expect } from 'chai';
+import Token from './';
 
 describe('abi/token/token', () => {
   describe('validateType', () => {

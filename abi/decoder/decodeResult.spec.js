@@ -1,4 +1,5 @@
 import DecodeResult from './decodeResult';
+import { expect } from 'chai';
 
 describe('abi/decoder/DecodeResult', () => {
   describe('constructor', () => {

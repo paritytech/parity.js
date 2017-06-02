@@ -28,6 +28,7 @@
   "dependencies": {
     "@parity/abi": "file:../abi",
     "@parity/jsonrpc": "file:../jsonrpc",
+    "@parity/wordlist": "^1.0.1",
     "bignumber.js": "3.0.1",
     "blockies": "0.0.2",
     "es6-error": "4.0.0",

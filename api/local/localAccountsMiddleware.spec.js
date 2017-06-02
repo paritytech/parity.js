@@ -1,4 +1,5 @@
-import LocalAccountsMiddleware from './localAccountsMiddleware';
+import LocalAccountsMiddleware from './';
+import { expect } from 'chai';
 import JsonRpcBase from '../transport/jsonRpcBase';
 
 const RPC_RESPONSE = Symbol('RPC response');

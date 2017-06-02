@@ -1,4 +1,4 @@
-import ParamType from './paramType';
+import ParamType from './';
 
 export function toParamType (type, indexed) {
   if (type[type.length - 1] === ']') {

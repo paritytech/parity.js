@@ -1,4 +1,5 @@
-import { TEST_WS_URL, mockWs } from '../../../../test/mockRpc';
+import { expect } from 'chai';
+import { TEST_WS_URL, mockWs } from '../mockRpc';
 import Ws from './ws';
 
 describe('api/transport/Ws', () => {

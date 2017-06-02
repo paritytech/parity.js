@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import Func from './function';
 import Param from './param';
 import Token from '../token';

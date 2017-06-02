@@ -1,6 +1,7 @@
-import ParamType from './paramType';
+import { expect } from 'chai';
+import ParamType from './';
 
-describe('abi/spec/paramType/ParamType', () => {
+describe('abi/spec/paramType', () => {
   describe('validateType', () => {
     it('validates address', () => {
       expect(ParamType.validateType('address')).to.be.true;

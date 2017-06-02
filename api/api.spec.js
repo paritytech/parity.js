@@ -1,9 +1,11 @@
+import { expect } from 'chai';
 import ethereumRpc from '@parity/jsonrpc';
-
-import { TEST_HTTP_URL, endpointTest } from '../../test/mockRpc';
+import nock from 'nock';
 
 import util from './util';
-import Api from './index';
+import Api from './';
+
+const TEST_HTTP_URL = 'http://localhost:6688';
 
 describe('api/Api', () => {
   describe('constructor', () => {
@@ -34,3 +36,47 @@ describe('api/Api', () => {
     expect(Api.util).to.equal(util);
   });
 });
+
+function endpointTest (instance, moduleId, name) {
+  describe(name, () => {
+    it(`has the ${moduleId}.${name} endpoint`, () => {
+      expect(typeof instance[moduleId][name] === 'function').to.be.ok;
+    });
+
+    it(`maps to ${moduleId}_${name} via RPC`, () => {
+      const scope = mockHttp([{ method: `${moduleId}_${name}`, reply: {} }]);
+
+      return instance[moduleId][name]()
+        .then(() => {
+          expect(scope.isDone()).to.be.true;
+        })
+        .catch(() => {
+          nock.cleanAll();
+        });
+    });
+  });
+}
+
+function mockHttp (requests) {
+  nock.cleanAll();
+  let scope = nock(TEST_HTTP_URL);
+
+  requests.forEach((request, index) => {
+    scope = scope
+      .post('/')
+      .reply(request.code || 200, (uri, body) => {
+        if (body.method !== request.method) {
+          return {
+            error: `Invalid method ${body.method}, expected ${request.method}`
+          };
+        }
+
+        scope.body = scope.body || {};
+        scope.body[request.method] = body;
+
+        return request.reply;
+      });
+  });
+
+  return scope;
+}

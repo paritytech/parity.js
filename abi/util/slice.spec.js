@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import { sliceData } from './slice';
 
 describe('abi/util/slice', () => {

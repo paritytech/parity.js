@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import Param from './param';
 
 describe('abi/spec/Param', () => {

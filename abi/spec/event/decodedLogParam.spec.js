@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import DecodedLogParam from './decodedLogParam';
 import ParamType from '../paramType';
 import Token from '../../token';

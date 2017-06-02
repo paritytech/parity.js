@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import { abiEncode, abiUnencode, abiSignature, encodeMethodCallAbi } from './encode';
 
 const ABI = {

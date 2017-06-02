@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import { eventSignature, methodSignature } from './signature';
 
 describe('abi/util/signature', () => {

@@ -1,6 +1,5 @@
- 
-
 import BytesTaken from './bytesTaken';
+import { expect } from 'chai';
 
 describe('abi/decoder/BytesTaken', () => {
   describe('constructor', () => {

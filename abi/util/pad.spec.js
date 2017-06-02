@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import BigNumber from 'bignumber.js';
 import { padAddress, padBool, padBytes, padFixedBytes, padString, padU32 } from './pad';
 

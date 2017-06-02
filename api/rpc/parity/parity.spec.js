@@ -1,6 +1,7 @@
+import { expect } from 'chai';
 import BigNumber from 'bignumber.js';
-import { TEST_HTTP_URL, mockHttp } from '../../../../test/mockRpc';
-import { isBigNumber } from '../../../../test/types';
+import { TEST_HTTP_URL, mockHttp } from '../mockRpc';
+import { isBigNumber } from '../../util/types';
 
 import { Http, PromiseWrapper } from '../../provider';
 import Parity from './parity';

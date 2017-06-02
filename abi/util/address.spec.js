@@ -1,4 +1,4 @@
- 
+import { expect } from 'chai';
 
 import { isChecksumValid, isAddress, toChecksumAddress } from './address';
 

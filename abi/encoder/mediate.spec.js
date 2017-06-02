@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import Mediate from './mediate';
 
 describe('abi/encoder/Mediate', () => {

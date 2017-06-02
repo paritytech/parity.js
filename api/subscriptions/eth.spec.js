@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import BigNumber from 'bignumber.js';
 import sinon from 'sinon';
 

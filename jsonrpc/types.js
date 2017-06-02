@@ -1,21 +1,21 @@
-export class Address {}
+const Address = {}
 
-export class Data {}
+const Data = {}
 
-export class Hash {}
+const Hash = {}
 
-export class Integer {}
+const Integer = {}
 
-export class Quantity {}
+const Quantity = {}
 
-export class BlockNumber {
-  static print = '`Quantity` | `Tag`';
+const BlockNumber = {
+  print: '`Quantity` | `Tag`'
 }
 
-export class CallRequest {
-  static print = '`Object`';
+const CallRequest = {
+  print: '`Object`',
 
-  static details = {
+  details: {
     from: {
       type: Address,
       desc: '20 Bytes - The address the transaction is send from.',
@@ -48,10 +48,10 @@ export class CallRequest {
   }
 }
 
-export class TransactionRequest {
-  static print = '`Object`';
+const TransactionRequest = {
+  print: '`Object`',
 
-  static details = {
+  details: {
     from: {
       type: Address,
       desc: '20 Bytes - The address the transaction is send from.'
@@ -94,10 +94,10 @@ export class TransactionRequest {
   }
 }
 
-export class TransactionResponse {
-  static print = '`Object`';
+const TransactionResponse = {
+  print: '`Object`',
 
-  static details = {
+  details: {
     hash: {
       type: Hash,
       desc: '32 Bytes - hash of the transaction.'
@@ -182,3 +182,5 @@ export class TransactionResponse {
     }
   }
 }
+
+export { Address, Data, Hash, Integer, Quantity, BlockNumber, CallRequest, TransactionRequest, TransactionResponse };

@@ -1,6 +1,5 @@
- 
-
 import BigNumber from 'bignumber.js';
+import { expect } from 'chai';
 
 import Decoder from './decoder';
 import ParamType from '../spec/paramType';

@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import Encoder from './encoder';
 import Token from '../token';
 import { padAddress, padFixedBytes, padU32 } from '../util/pad';

@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import Middleware from './middleware';
 import JsonRpcBase from './jsonRpcBase';
 

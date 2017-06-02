@@ -1,4 +1,5 @@
-import { randomPhrase } from '@parity/wordlist';
+import { randomPhrase } from '../../../wordlist';
+import { expect } from 'chai';
 import { phraseToAddress, phraseToWallet } from './';
 
 describe('api/local/ethkey', () => {

@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import { isArray, isString, isInstanceOf } from './types';
 import Token from '../token';
 

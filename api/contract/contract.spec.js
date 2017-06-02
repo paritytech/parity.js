@@ -1,18 +1,20 @@
 import BigNumber from 'bignumber.js';
 import sinon from 'sinon';
+import { expect } from 'chai';
+import nock from 'nock';
 
 import Abi from '@parity/abi';
 
-import { TEST_HTTP_URL, mockHttp } from '../../../test/mockRpc';
-
 import { sha3 } from '../util/sha3';
 
-import Api from '../api';
-import Contract from './contract';
+import Api from '../';
+import Contract from './';
 import { isInstanceOf, isFunction } from '../util/types';
 
 const provider = new Api.Provider.Http(TEST_HTTP_URL, -1);
 const eth = new Api(provider);
+
+const TEST_HTTP_URL = 'http://localhost:6688';
 
 describe('api/contract/Contract', () => {
   const ADDR = '0x0123456789';
@@ -580,3 +582,27 @@ describe('api/contract/Contract', () => {
     });
   });
 });
+
+function mockHttp (requests) {
+  nock.cleanAll();
+  let scope = nock(TEST_HTTP_URL);
+
+  requests.forEach((request, index) => {
+    scope = scope
+      .post('/')
+      .reply(request.code || 200, (uri, body) => {
+        if (body.method !== request.method) {
+          return {
+            error: `Invalid method ${body.method}, expected ${request.method}`
+          };
+        }
+
+        scope.body = scope.body || {};
+        scope.body[request.method] = body;
+
+        return request.reply;
+      });
+  });
+
+  return scope;
+}

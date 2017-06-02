@@ -1,5 +1,6 @@
-import { TEST_HTTP_URL, mockHttp } from '../../../../test/mockRpc';
-import { isBigNumber } from '../../../../test/types';
+import { expect } from 'chai';
+import { TEST_HTTP_URL, mockHttp } from '../mockRpc';
+import { isBigNumber } from '../../util/types';
 
 import { Http, PromiseWrapper } from '../../provider';
 import Eth from './eth';

@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import interfaces from './';
 import * as customTypes from './types';
 
