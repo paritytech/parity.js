@@ -1,20 +1,22 @@
+import "isomorphic-fetch";
 import BigNumber from 'bignumber.js';
-import sinon from 'sinon';
-import { expect } from 'chai';
 import nock from 'nock';
-
-import Abi from '@parity/abi';
+import sinon from 'sinon';
+import chai, { expect } from 'chai';
+import sinonChai from 'sinon-chai';
+chai.use(sinonChai);
 
 import { sha3 } from '../util/sha3';
 
+import Abi from '@parity/abi';
 import Api from '../';
 import Contract from './';
 import { isInstanceOf, isFunction } from '../util/types';
 
+const TEST_HTTP_URL = 'http://localhost:6688';
+
 const provider = new Api.Provider.Http(TEST_HTTP_URL, -1);
 const eth = new Api(provider);
-
-const TEST_HTTP_URL = 'http://localhost:6688';
 
 describe('api/contract/Contract', () => {
   const ADDR = '0x0123456789';
@@ -576,7 +578,7 @@ describe('api/contract/Contract', () => {
         return contract
           .subscribe('Message', { toBlock: 'pending' }, cbe)
           .then((subscriptionId) => {
-            expect(cbe).to.have.been.calledWith(null, parsed);
+            expect(cbe).calledWith(null, parsed).to.be.ok;
           });
       });
     });
