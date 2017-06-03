@@ -1,3 +1,4 @@
+import "isomorphic-fetch";
 import { expect } from 'chai';
 import ethereumRpc from '@parity/jsonrpc';
 import nock from 'nock';

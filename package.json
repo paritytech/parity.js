@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test mocha --require babel-core.js 'api/**/*.spec.js'",
-    "testI": "NODE_ENV=test mocha --require babel-core.js 'api/format/output.spec.js'"
+    "testI": "NODE_ENV=test mocha --require babel-core.js 'api/rpc/db/db.spec.js'"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -36,8 +36,10 @@
     "blockies": "0.0.2",
     "ejs-loader": "^0.3.0",
     "es6-error": "4.0.0",
+    "es6-promise": "^4.1.0",
     "ethereumjs-tx": "1.2.5",
     "eventemitter3": "2.0.2",
+    "isomorphic-fetch": "^2.2.1",
     "js-sha3": "0.5.5",
     "keythereum": "0.4.6",
     "node-fetch": "1.6.3",
