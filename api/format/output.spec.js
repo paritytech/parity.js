@@ -2,7 +2,8 @@ import BigNumber from 'bignumber.js';
 import { expect } from 'chai';
 
 import { outBlock, outAccountInfo, outAddress, outChainStatus, outDate, outHistogram, outHwAccountInfo, outNodeKind, outNumber, outPeer, outPeers, outReceipt, outRecentDapps, outSyncing, outTransaction, outTrace, outVaultMeta } from './output';
-import { isAddress, isBigNumber, isInstanceOf } from '../util/types';
+import { isBigNumber, isInstanceOf } from '../util/types';
+import { isAddress } from '../../abi/util/address';
 
 describe('api/format/output', () => {
   const address = '0x63cf90d3f0410092fc0fca41846f596223979195';

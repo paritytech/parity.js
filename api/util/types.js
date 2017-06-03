@@ -1,4 +1,10 @@
+import BigNumber from 'bignumber.js';
+
 const HEXDIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+
+export function isBigNumber (test) {
+  return isInstanceOf(test, BigNumber);
+}
 
 export function isArray (test) {
   return Object.prototype.toString.call(test) === '[object Array]';

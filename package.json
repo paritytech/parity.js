@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test mocha --require babel-core.js 'api/**/*.spec.js'",
-    "testI": "NODE_ENV=test mocha --require babel-core.js 'api/format/input.spec.js'"
+    "testI": "NODE_ENV=test mocha --require babel-core.js 'api/format/output.spec.js'"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
