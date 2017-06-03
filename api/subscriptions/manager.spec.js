@@ -1,5 +1,7 @@
-import { expect } from 'chai';
+import chai, { expect } from 'chai';
 import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+chai.use(sinonChai);
 
 import Manager, { events } from './manager';
 
@@ -39,7 +41,7 @@ describe('api/subscriptions/manager', () => {
 
   describe('constructor', () => {
     it('sets up the subscription types & defaults', () => {
-      expect(manager.subscriptions).to.be.an.array;
+      expect(manager.subscriptions).to.be.an('array');
       expect(Object.keys(manager.values)).to.deep.equal(Object.keys(events));
     });
   });
@@ -69,15 +71,15 @@ describe('api/subscriptions/manager', () => {
           });
 
           it(`puts the ${module} engine in a started state`, () => {
-            expect(engine.start).to.have.been.called;
+            expect(engine.start).to.be.called;
           });
 
           it('returns a subscriptionId', () => {
-            expect(subscriptionId).to.be.a.number;
+            expect(subscriptionId).to.be.an('number');
           });
 
           it('calls the subscription callback with updated values', () => {
-            expect(cb).to.have.been.calledWith(null, 'test');
+            expect(cb).calledWith(null, 'test').to.be.ok;
           });
         });
       });

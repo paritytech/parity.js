@@ -6,7 +6,7 @@ import {
   inNumber10, inNumber16, inOptions, inTraceType,
   inDeriveHash, inDeriveIndex
 } from './input';
-import { isAddress } from '../util/types';
+import { isAddress } from '../../abi/util/address';
 
 describe('api/format/input', () => {
   const address = '0x63cf90d3f0410092fc0fca41846f596223979195';

@@ -1,3 +1,4 @@
 export './abi'
 export './api'
-export 'jsonrpc'
+export './jsonrpc'
+export './wordlist'

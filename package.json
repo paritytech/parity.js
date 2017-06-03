@@ -4,7 +4,8 @@
   "description": "The Parity Promise-based API library for interfacing with Ethereum over RPC",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha --require babel-core.js 'api/**/*.spec.js'"
+    "test": "NODE_ENV=test mocha --require babel-core.js 'api/**/*.spec.js'",
+    "testI": "NODE_ENV=test mocha --require babel-core.js 'api/format/input.spec.js'"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -19,10 +20,12 @@
     "chai-as-promised": "^6.0.0",
     "chai-enzyme": "^0.7.1",
     "enzyme": "^2.8.2",
+    "fetch-mock": "^5.11.0",
     "mocha": "^3.4.2",
     "mock-socket": "^6.1.0",
     "nock": "^9.0.13",
     "sinon": "^2.3.2",
+    "sinon-chai": "^2.10.0",
     "utf8": "^2.1.2"
   },
   "dependencies": {
@@ -53,11 +56,7 @@
     "eth",
     "rpc"
   ],
-  "maintainers": [
-    "Jaco Greeff",
-    "Nicolas Gotchac",
-    "Connor"
-  ],
+  "maintainers": [],
   "contributors": [],
   "author": "Parity Technologies <admin@parity.io>",
   "license": "GPL-3.0",

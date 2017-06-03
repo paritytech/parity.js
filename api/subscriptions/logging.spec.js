@@ -1,5 +1,7 @@
-import { expect } from 'chai';
+import chai, { expect } from 'chai';
 import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+chai.use(sinonChai);
 
 import Logging from './logging';
 
@@ -8,7 +10,7 @@ describe('api/subscriptions/logging', () => {
   let logging;
 
   beforeEach(() => {
-    cb = sinon.stub();
+    cb = sinon.spy();
     logging = new Logging(cb);
   });
 
@@ -28,7 +30,7 @@ describe('api/subscriptions/logging', () => {
     });
 
     it('calls the subscription update', () => {
-      expect(cb).to.have.been.calledWith('logging', null, { method, params, json });
+      expect(cb).calledWith('logging', null, { method, params, json });
     });
   });
 });
