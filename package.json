@@ -4,8 +4,11 @@
   "description": "The Parity Promise-based API library for interfacing with Ethereum over RPC",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha --require babel-core.js 'jsonrpc/**/*.spec.js'",
-    "testI": "NODE_ENV=test mocha --require babel-core.js 'api/contract/contract.spec.js'"
+    "test": "npm run test:abi && npm run test:api && npm run test:jsonrpc && npm run test:wordlist",
+    "test:abi": "NODE_ENV=test mocha --require babel-core.js 'abi/**/*.spec.js'",
+    "test:api": "NODE_ENV=test mocha --require babel-core.js 'api/**/*.spec.js'",
+    "test:jsonrpc": "NODE_ENV=test mocha --require babel-core.js 'jsonrpc/**/*.spec.js'",
+    "test:wordlist": "NODE_ENV=test mocha --require babel-core.js 'wordlist/**/*.spec.js'"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
