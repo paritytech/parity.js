@@ -14,12 +14,12 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-import { expect } from 'chai';
+import chai, { expect } from 'chai';
+import sinonChai from 'sinon-chai';
 import wrap from 'mocha-wrap';
 import sinon from 'sinon';
 
-
-import Ledger from './';
+chai.use(sinonChai);
 
 const TEST_ADDRESS = '0x63Cf90D3f0410092FC0fca41846f596223979195';
 
@@ -28,6 +28,16 @@ const mockWindow = {
     href: 'test/url'
   }
 };
+
+global.location = {
+  href: 'test/url'
+}
+
+global.navigator = {
+  userAgent: 'node.js'
+};
+
+let Ledger;
 
 let api;
 let ledger;
@@ -73,6 +83,7 @@ function create (error) {
 
 wrap().withGlobal('window', () => mockWindow).describe('3rdparty/ledger', () => {
   beforeEach(() => {
+    Ledger = require('./').default;
     create();
 
     sinon.spy(vendor, 'getAddress');
