@@ -35,6 +35,7 @@
     "@parity/abi": "file:./abi",
     "@parity/jsonrpc": "file:./jsonrpc",
     "@parity/wordlist": "^1.0.1",
+    "babel-plugin-webpack-alias": "^2.1.2",
     "bignumber.js": "3.0.1",
     "blockies": "0.0.2",
     "ejs-loader": "^0.3.0",
