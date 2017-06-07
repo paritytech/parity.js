@@ -6,23 +6,5 @@
    "transform-export-extensions",
    "transform-es2015-template-literals"
  ],
- "retainLines": true,
- "env": {
-    "production": {
-      "plugins": [
-        "transform-react-remove-prop-types"
-      ]
-    },
-    "development": {
-      "plugins": [
-        [ "react-intl", { "messagesDir": "./.build/i18n/" } ],
-        "react-hot-loader/babel"
-      ]
-    },
-    "test": {
-      "plugins": [
-        [ "babel-plugin-webpack-alias", { "config": "./webpack.test.js" } ]
-      ]
-    }
-  }
+ "retainLines": true
 }
