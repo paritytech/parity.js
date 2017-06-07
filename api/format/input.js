@@ -18,10 +18,8 @@ export function inBlockNumber (blockNumber) {
       case 'earliest':
       case 'latest':
       case 'pending':
-        return blockNumber;
-
       default:
-        return null;
+        return blockNumber;
     }
   }
 

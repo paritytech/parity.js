@@ -10,7 +10,7 @@
     "lint:api": "eslint --ignore-path .gitignore ./api/",
     "lint:jsonrpc": "eslint --ignore-path .gitignore ./jsonrpc/",
     "lint:wordlist": "eslint --ignore-path .gitignore ./wordlist/",
-    "test": "yarn run test:3rdparty && yarn run test:abi && yarn run test:api && yarn run test:jsonrpc && yarn run test:wordlist",
+    "test": "yarn run test:abi && yarn run test:api && yarn run test:jsonrpc && yarn run test:wordlist",
     "test:3rdparty": "NODE_ENV=test mocha --require babel-core.js '3rdparty/**/*.spec.js'",
     "test:abi": "NODE_ENV=test mocha --require babel-core.js 'abi/**/*.spec.js'",
     "test:api": "NODE_ENV=test mocha --require babel-core.js 'api/**/*.spec.js'",
