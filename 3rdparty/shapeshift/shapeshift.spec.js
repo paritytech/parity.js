@@ -14,7 +14,9 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-const sinon = require('sinon');
+import chai, { expect } from 'chai';
+import sinonChai from 'sinon-chai';
+import sinon from 'sinon';
 
 const ShapeShift = require('./');
 const initShapeshift = (ShapeShift.default || ShapeShift);
@@ -23,6 +25,8 @@ const helpers = require('./helpers.spec.js');
 
 const mockget = helpers.mockget;
 const mockpost = helpers.mockpost;
+
+chai.use(sinonChai);
 
 describe('shapeshift/calls', () => {
   let clock;

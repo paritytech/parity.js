@@ -14,11 +14,20 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
+import { expect } from 'chai';
+import wrap from 'mocha-wrap';
 import sinon from 'sinon';
+
 
 import Ledger from './';
 
 const TEST_ADDRESS = '0x63Cf90D3f0410092FC0fca41846f596223979195';
+
+const mockWindow = {
+  location: {
+    href: 'test/url'
+  }
+};
 
 let api;
 let ledger;
@@ -62,7 +71,7 @@ function create (error) {
   return ledger;
 }
 
-describe('3rdparty/ledger', () => {
+wrap().withGlobal('window', () => mockWindow).describe('3rdparty/ledger', () => {
   beforeEach(() => {
     create();
 

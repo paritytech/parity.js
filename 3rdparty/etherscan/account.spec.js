@@ -14,6 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
+import { expect } from 'chai';
 const etherscan = require('./');
 
 const TESTADDR = '0xbf885e2b55c6bcc84556a3c5f07d3040833c8d00';
