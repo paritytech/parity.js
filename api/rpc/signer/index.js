@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.default = undefined;var _signer = require('./signer');var _signer2 = _interopRequireDefault(_signer);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default = _signer2.default;module.exports = exports['default'];

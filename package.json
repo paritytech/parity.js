@@ -1,6 +1,6 @@
 {
   "name": "parity",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "The Parity Promise-based API library for interfacing with Ethereum over RPC",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint:api": "eslint --ignore-path .gitignore ./src/api/",
     "lint:jsonrpc": "eslint --ignore-path .gitignore ./src/jsonrpc/",
     "lint:wordlist": "eslint --ignore-path .gitignore ./src/wordlist/",
-    "prepublish": "node_modules/babel-cli/bin/babel.js src --out-dir lib/",
+    "prepublish": "node_modules/babel-cli/bin/babel.js src --out-dir ./",
     "test": "yarn run test:3rdparty && yarn run test:abi && yarn run test:api && yarn run test:jsonrpc && yarn run test:wordlist",
     "test:3rdparty": "NODE_ENV=test mocha --require babel-core.js 'src/3rdparty/**/*.spec.js'",
     "test:abi": "NODE_ENV=test mocha --require babel-core.js 'src/abi/**/*.spec.js'",

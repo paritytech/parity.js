@@ -83,7 +83,7 @@ function create (error) {
 
 wrap().withGlobal('window', () => mockWindow).describe('3rdparty/ledger', () => {
   beforeEach(() => {
-    Ledger = require('./').default;
+    Ledger = require('./');
     create();
 
     sinon.spy(vendor, 'getAddress');
