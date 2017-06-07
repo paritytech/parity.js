@@ -1,13 +1,9 @@
 import { expect } from 'chai';
-import chai, { expect } from 'chai';
-import sinonChai from 'sinon-chai';
 import ethereumRpc from '@parity/jsonrpc';
 import nock from 'nock';
 
 import util from './util';
 import Api from './';
-
-chai.use(sinonChai);
 
 const TEST_HTTP_URL = 'http://localhost:6688';
 
