@@ -4,7 +4,7 @@ import transactions from './transactions';
 import { Middleware } from '../transport';
 import { inNumber16 } from '../format/input';
 import { phraseToWallet, phraseToAddress, verifySecret } from './ethkey';
-import { randomPhrase } from '@parity/wordlist';
+import { randomPhrase } from '../../wordlist';
 
 export default class LocalAccountsMiddleware extends Middleware {
   constructor (transport) {

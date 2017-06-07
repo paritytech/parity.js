@@ -1,4 +1,4 @@
-import { isAddress as isAddressValid, toChecksumAddress } from '@parity/abi/util/address';
+import { isAddress as isAddressValid, toChecksumAddress } from '../../abi/util/address';
 
 import { abiDecode, decodeCallData, decodeMethodInput, methodToAbi } from './decode';
 import { abiEncode, abiUnencode, abiSignature, encodeMethodCallAbi } from './encode';

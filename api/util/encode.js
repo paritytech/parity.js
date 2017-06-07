@@ -1,5 +1,5 @@
-import Abi from '@parity/abi';
-import Func from '@parity/abi/spec/function';
+import Abi from '../../abi';
+import Func from '../../abi/spec/function';
 
 import { abiDecode } from './decode';
 import { cleanupValue } from './format';

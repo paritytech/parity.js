@@ -1,4 +1,4 @@
-import Abi from '@parity/abi';
+import Abi from '../../abi';
 
 let nextSubscriptionId = 0;
 

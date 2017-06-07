@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import ethereumRpc from '@parity/jsonrpc';
+import ethereumRpc from '../jsonrpc';
 import nock from 'nock';
 
 import util from './util';

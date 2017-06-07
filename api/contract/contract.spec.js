@@ -6,7 +6,7 @@ import chai, { expect } from 'chai';
 import sinonChai from 'sinon-chai';
 import { sha3 } from '../util/sha3';
 
-import Abi from '@parity/abi';
+import Abi from '../../abi';
 import Api from '../';
 import Contract from './';
 import { isInstanceOf, isFunction } from '../util/types';
