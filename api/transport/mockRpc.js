@@ -60,7 +60,7 @@ export function mockWs (requests) {
 export function endpointTest (instance, moduleId, name) {
   describe(name, () => {
     it(`has the ${moduleId}.${name} endpoint`, () => {
-      expect(isFunction(instance[moduleId][name])).to.be.ok;
+      expect(typeof instance[moduleId][name] === 'function').to.be.ok;
     });
 
     it(`maps to ${moduleId}_${name} via RPC`, () => {

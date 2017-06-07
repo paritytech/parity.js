@@ -1,9 +1,9 @@
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-chai.use(sinonChai);
-
 import Manager, { events } from './manager';
+
+chai.use(sinonChai);
 
 function newStub () {
   const start = () => manager._updateSubscriptions(manager.__test, null, 'test');

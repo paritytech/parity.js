@@ -4,14 +4,14 @@ import nock from 'nock';
 import sinon from 'sinon';
 import chai, { expect } from 'chai';
 import sinonChai from 'sinon-chai';
-chai.use(sinonChai);
-
 import { sha3 } from '../util/sha3';
 
 import Abi from '@parity/abi';
 import Api from '../';
 import Contract from './';
 import { isInstanceOf, isFunction } from '../util/types';
+
+chai.use(sinonChai);
 
 const TEST_HTTP_URL = 'http://localhost:6688';
 

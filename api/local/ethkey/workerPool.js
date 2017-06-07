@@ -1,5 +1,5 @@
 const hasWebWorkers = typeof Worker !== 'undefined';
-const KeyWorker = hasWebWorkers ? require('worker-loader!./worker')
+const KeyWorker = hasWebWorkers ? require('worker-loader!./worker') // eslint-disable-line
                                 : require('./worker').KeyWorker;
 
 class WorkerContainer {

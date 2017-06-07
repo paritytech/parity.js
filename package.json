@@ -4,7 +4,14 @@
   "description": "The Parity Promise-based API library for interfacing with Ethereum over RPC",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test:abi && npm run test:api && npm run test:jsonrpc && npm run test:wordlist",
+    "lint": "yarn run lint:3rdparty && yarn run lint:abi && yarn run lint:api && yarn run lint:jsonrpc && yarn run lint:wordlist",
+    "lint:3rdparty": "eslint --ignore-path .gitignore ./3rdparty/",
+    "lint:abi": "eslint --ignore-path .gitignore ./abi/",
+    "lint:api": "eslint --ignore-path .gitignore ./api/",
+    "lint:jsonrpc": "eslint --ignore-path .gitignore ./jsonrpc/",
+    "lint:wordlist": "eslint --ignore-path .gitignore ./wordlist/",
+    "test": "yarn run test:3rdparty && yarn run test:abi && yarn run test:api && yarn run test:jsonrpc && yarn run test:wordlist",
+    "test:3rdparty": "NODE_ENV=test mocha --require babel-core.js '3rdparty/**/*.spec.js'",
     "test:abi": "NODE_ENV=test mocha --require babel-core.js 'abi/**/*.spec.js'",
     "test:api": "NODE_ENV=test mocha --require babel-core.js 'api/**/*.spec.js'",
     "test:jsonrpc": "NODE_ENV=test mocha --require babel-core.js 'jsonrpc/**/*.spec.js'",
@@ -13,6 +20,7 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
+    "babel-eslint": "7.2.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-template-literals": "^6.22.0",
     "babel-plugin-transform-export-extensions": "^6.22.0",
@@ -23,6 +31,10 @@
     "chai-as-promised": "^6.0.0",
     "chai-enzyme": "^0.7.1",
     "enzyme": "^2.8.2",
+    "eslint": "3.19.0",
+    "eslint-config-react-app": "^1.0.4",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-react": "^7.0.1",
     "fetch-mock": "^5.11.0",
     "mocha": "^3.4.2",
     "mock-socket": "^6.1.0",
@@ -41,6 +53,9 @@
     "ejs-loader": "^0.3.0",
     "es6-error": "4.0.0",
     "es6-promise": "^4.1.0",
+    "eslint-plugin-flowtype": "2.33.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "5.0.3",
     "ethereumjs-tx": "1.2.5",
     "eventemitter3": "2.0.2",
     "isomorphic-fetch": "^2.2.1",
@@ -69,5 +84,23 @@
   "bugs": {
     "url": "https://github.com/paritytech/parity.js/issues"
   },
-  "homepage": "https://github.com/paritytech/parity.js#readme"
+  "homepage": "https://github.com/paritytech/parity.js#readme",
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ],
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "mocha": true,
+      "node": true
+    },
+    "globals": {
+      "expect": true,
+      "FileReader": true
+    },
+    "rules": {
+      "no-unused-expressions": 0
+    }
+  }
 }

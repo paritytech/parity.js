@@ -1,6 +1,6 @@
-const TYPES = ['raw', 'prefixed', 'fixedArray', 'array'];
-
 import { padU32 } from '../util/pad';
+
+const TYPES = ['raw', 'prefixed', 'fixedArray', 'array'];
 
 export default class Mediate {
   constructor (type, value) {
@@ -24,6 +24,9 @@ export default class Mediate {
           .reduce((total, mediate) => {
             return total + mediate.initLength();
           }, 0);
+
+      default:
+        return null;
     }
   }
 
@@ -46,6 +49,9 @@ export default class Mediate {
           .reduce((total, mediate) => {
             return total + mediate.initLength() + mediate.closingLength();
           }, 0);
+
+      default:
+        return null;
     }
   }
 
@@ -62,6 +68,9 @@ export default class Mediate {
       case 'prefixed':
       case 'array':
         return padU32(suffixOffset);
+
+      default:
+        return null;
     }
   }
 
@@ -88,6 +97,9 @@ export default class Mediate {
           .join('');
 
         return `${prefix}${inits}${closings}`;
+
+      default:
+        return null;
     }
   }
 

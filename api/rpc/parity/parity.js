@@ -282,7 +282,7 @@ export default class Parity {
       .then(transactions => {
         Object.values(transactions)
           .filter(tx => tx.transaction)
-          .map(tx => {
+          .forEach(tx => {
             tx.transaction = outTransaction(tx.transaction);
           });
         return transactions;
