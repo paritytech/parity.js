@@ -1,4 +1,4 @@
-export default class PromiseWrapper {
+export default class PromiseProvider {
   constructor (provider) {
     this.provider = provider;
   }

@@ -1,4 +1,5 @@
-export PromiseWrapper from './promiseWrapper';
+export PromiseProvider from './promise';
 
 export Http from './http';
-export Ws from './ws';
+export PostMessage from './postMessage';
+export WsSecure from './wsSecure';

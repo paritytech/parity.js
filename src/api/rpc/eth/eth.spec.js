@@ -2,10 +2,10 @@ import { expect } from 'chai';
 import { TEST_HTTP_URL, mockHttp } from '../mockRpc';
 import { isBigNumber } from '../../util/types';
 
-import { Http, PromiseWrapper } from '../../provider';
+import { Http, PromiseProvider } from '../../provider';
 import Eth from './eth';
 
-const instance = new Eth(new PromiseWrapper(new Http(TEST_HTTP_URL, -1)));
+const instance = new Eth(new PromiseProvider(new Http(TEST_HTTP_URL, -1)));
 
 describe('rpc/Eth', () => {
   const address = '0x63Cf90D3f0410092FC0fca41846f596223979195';

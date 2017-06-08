@@ -1,6 +1,6 @@
-import { Ws as Transport } from '../transport';
+import { WsSecure as Transport } from '../transport';
 
-export default class Ws extends Transport {
+export default class WsSecure extends Transport {
   send = (method, params, callback) => {
     this
       ._execute(method, params)

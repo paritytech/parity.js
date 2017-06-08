@@ -1,15 +1,15 @@
 import { expect } from 'chai';
 import { TEST_WS_URL, mockWs } from '../mockRpc';
-import Ws from './ws';
+import WsSecure from './wsSecure';
 
-describe('api/transport/Ws', () => {
+describe('api/transport/WsSecure', () => {
   let transport;
   let scope;
 
   describe('transport emitter', () => {
     const connect = () => {
       const scope = mockWs();
-      const transport = new Ws(TEST_WS_URL);
+      const transport = new WsSecure(TEST_WS_URL);
 
       return { transport, scope };
     };
@@ -42,7 +42,7 @@ describe('api/transport/Ws', () => {
 
     beforeEach(() => {
       scope = mockWs([{ method: 'test_anyCall', reply: 'TestResult' }]);
-      transport = new Ws(TEST_WS_URL);
+      transport = new WsSecure(TEST_WS_URL);
 
       return transport
         .execute('test_anyCall', [1, 2, 3])
@@ -83,7 +83,7 @@ describe('api/transport/Ws', () => {
   describe('errors', () => {
     beforeEach(() => {
       scope = mockWs([{ method: 'test_anyCall', reply: { error: { code: 1, message: 'TestError' } } }]);
-      transport = new Ws(TEST_WS_URL);
+      transport = new WsSecure(TEST_WS_URL);
     });
 
     afterEach(() => {

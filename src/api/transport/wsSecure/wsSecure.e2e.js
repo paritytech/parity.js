@@ -1,8 +1,8 @@
-import Ws from './ws';
+import WsSecure from './wsSecure';
 
-const ws = new Ws('ws://localhost:8546/');
+const ws = new WsSecure('ws://localhost:8546/');
 
-describe('transport/Ws', () => {
+describe('transport/WsSecure', () => {
   it('connects and makes a call to web3_clientVersion', () => {
     return ws.execute('web3_clientVersion').then((version) => {
       const [client] = version.split('/');

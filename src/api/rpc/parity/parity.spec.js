@@ -3,10 +3,10 @@ import BigNumber from 'bignumber.js';
 import { TEST_HTTP_URL, mockHttp } from '../mockRpc';
 import { isBigNumber } from '../../util/types';
 
-import { Http, PromiseWrapper } from '../../provider';
+import { Http, PromiseProvider } from '../../provider';
 import Parity from './parity';
 
-const instance = new Parity(new PromiseWrapper(new Http(TEST_HTTP_URL, -1)));
+const instance = new Parity(new PromiseProvider(new Http(TEST_HTTP_URL, -1)));
 
 describe('api/rpc/parity', () => {
   describe('accountsInfo', () => {
