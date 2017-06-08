@@ -80,4 +80,8 @@ export default class Http extends JsonRpcBase {
       .then(nextTimeout)
       .catch(nextTimeout);
   }
+
+  set url (url) {
+    this._url = url;
+  }
 }
