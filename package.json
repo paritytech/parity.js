@@ -1,6 +1,6 @@
 {
   "name": "parity",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "The Parity Promise-based API library for interfacing with Ethereum over RPC",
   "main": "index.js",
   "scripts": {
