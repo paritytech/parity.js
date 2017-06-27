@@ -11,6 +11,7 @@
 ### Lightweight JSON-RPC protocol in conjunction with [parity](https://github.com/paritytech/parity) & wrapper of the ETH interface.
 
 Be sure to check out [our wiki][wiki-url] for more information.
+
 [wiki-url]: https://github.com/paritytech/parity/wiki
 
 ----
