@@ -119,8 +119,8 @@ export default class Contract {
           .postTransaction(encodedOptions)
           .then((result) => {
             if(result.length !== 66) {
-              statecb(null, { state: 'checkRequest', requestId });
-              return this._pollCheckRequest(requestId);
+              statecb(null, { state: 'checkRequest', result });
+              return this._pollCheckRequest(result);
             } else { return result; }
           })
           .then((txhash) => {
